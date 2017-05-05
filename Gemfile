@@ -34,3 +34,5 @@ gem 'turbolinks', '~> 5.0.1'
 gem 'thor', '0.19.4'
 # CSS Framework
 gem 'bootstrap-sass'
+# Used for encrypting User passwords
+gem 'bcrypt'
