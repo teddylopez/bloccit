@@ -33,6 +33,6 @@ gem 'turbolinks', '~> 5.0.1'
 # Expected string value
 gem 'thor', '0.19.4'
 # CSS Framework
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '3.2.0.2'
 # Used for encrypting User passwords
 gem 'bcrypt'
