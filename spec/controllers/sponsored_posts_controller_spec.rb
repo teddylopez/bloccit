@@ -1,7 +1,7 @@
 require 'rails_helper'
 include RandomData
 
-RSpec.describe SponsoredPostController, type: :controller do
+RSpec.describe SponsoredPostsController, type: :controller do
   let(:topic) { Topic.create!(name: RandomData.random_sentence, description: RandomData.random_paragraph) }
   let(:sponsored_post) { topic.sponsored_posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph) }
 
@@ -18,7 +18,7 @@ RSpec.describe SponsoredPostController, type: :controller do
 
     it 'assigns sponsored_post to @sponsored_post' do
       get :show, topic_id: topic.id, id: sponsored_post.id
-      expect(assigns[:sponsored_post]).to eq(sponsored_post)
+      expect(assigns[:sponsored_posts]).to eq(sponsored_post)
     end
   end
 
