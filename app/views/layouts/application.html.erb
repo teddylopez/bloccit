@@ -3,7 +3,7 @@
 <head>
   <title>Bloccit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -18,7 +18,7 @@
         <% if current_user %>
           <%= image_tag avatar_url(current_user), class: :gravatar %>
             <div class="pull-right">
- +           <%= current_user.name %> <br> <%= link_to "Sign Out", session_path(current_user), method: :delete %>
+            <%= current_user.name %> <br> <%= link_to "Sign Out", session_path(current_user), method: :delete %>
             </div>
         <% else %>
           <%= link_to "Sign In", new_session_path %> or
