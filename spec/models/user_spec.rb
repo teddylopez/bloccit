@@ -30,6 +30,10 @@ RSpec.describe User, type: :model do
       expect(user).to respond_to(:admin?)
     end
 
+    it "responds to moderator?" do
+      expect(user).to respond_to(:moderator?)
+    end
+
     it "responds to member?" do
       expect(user).to respond_to(:member?)
     end
