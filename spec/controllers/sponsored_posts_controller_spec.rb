@@ -18,7 +18,7 @@ RSpec.describe SponsoredPostsController, type: :controller do
 
     it 'assigns sponsored_post to @sponsored_post' do
       get :show, topic_id: topic.id, id: sponsored_post.id
-      expect(assigns[:sponsored_posts]).to eq(sponsored_post)
+      expect(assigns[:sponsored_post]).to eq(sponsored_post)
     end
   end
 
