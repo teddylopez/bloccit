@@ -74,4 +74,18 @@ RSpec.describe Post, type: :model do
       end
     end
   end
+
+  describe '#create_vote' do
+    before do
+      @new_post = topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: user)
+    end
+
+    it 'automatically updates the post with an up vote on create' do
+      expect(@new_post.up_votes).to eq(1)
+    end
+
+    it 'associates the vote with the current user' do
+      expect(@new_post.votes.where(user: user).count).to eq(1)
+    end
+  end
 end
