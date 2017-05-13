@@ -37,14 +37,19 @@ class Post < ActiveRecord::Base
     update_attribute(:rank, new_rank)
   end
 
+
+  def create_vote
+    user.votes.create(post: self, value: 1)
+  end
+
   def create_favorite
     Favorite.create(post: self, user: self.user)
     FavoriteMailer.new_post(self).deliver_now
   end
 
-  private
-
-  def create_vote
-    user.votes.create(post: self, value: 1)
+  def send_favorite_emails
+    self.favorites.each do |favorite|
+      FavoriteMailer.new_post(favorite.user, self).deliver_now
+    end
   end
 end
