@@ -2,9 +2,9 @@ class FavoriteMailer < ApplicationMailer
   default from: 'tedmlopez@gmail.com'
 
   def new_comment(user, post, comment)
-    headers["Message-ID"] = "<comments/#{comment.id}@your-app-name.example>"
-    headers["In-Reply-To"] = "<post/#{post.id}@your-app-name.example>"
-    headers["References"] = "<post/#{post.id}@your-app-name.example>"
+    headers["Message-ID"] = "<comments/#{comment.id}@mysterious-reaches-20384>"
+    headers["In-Reply-To"] = "<post/#{post.id}@mysterious-reaches-20384>"
+    headers["References"] = "<post/#{post.id}@mysterious-reaches-20384>"
 
     @user = user
     @post = post
