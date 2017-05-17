@@ -33,18 +33,6 @@ RSpec.describe User, type: :model do
       expect(user).to respond_to(:admin?)
     end
 
-    it "responds to member?" do
-      expect(user).to respond_to(:member?)
-    end
-
-    it "responds to role" do
-      expect(user).to respond_to(:role)
-    end
-
-    it "responds to admin?" do
-      expect(user).to respond_to(:admin?)
-    end
-
     it 'should respond to moderator?' do
       expect(user).to respond_to(:moderator?)
     end
@@ -129,17 +117,19 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "#favorite_for(post)" do
+  describe '#favorite_for(post)' do
+    let(:other_user) { create(:user) }
+
     before do
       topic = Topic.create!(name: RandomData.random_sentence, description: RandomData.random_paragraph)
-      @post = topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: user)
+      @post = topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: other_user)
     end
 
-    it "returns `nil` if the user has not favorited the post" do
+    it 'returns `nil` if the user has not favorited the post' do
       expect(user.favorite_for(@post)).to be_nil
     end
 
-    it "returns the appropriate favorite if it exists" do
+    it 'returns the appopriate favorite if it exists' do
       favorite = user.favorites.where(post: @post).create
       expect(user.favorite_for(@post)).to eq(favorite)
     end
