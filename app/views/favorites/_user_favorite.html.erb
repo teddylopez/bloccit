@@ -1,1 +1,3 @@
-<%= favorite.post.title %>
+<ul>
+  <li><%= favorite.post.title %> By: <%= link_to(favorite.post.user.name) %> Votes: <%= favorite.post.rank %></li>
+</ul>
