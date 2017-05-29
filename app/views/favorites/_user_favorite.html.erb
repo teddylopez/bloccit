@@ -1,3 +1,11 @@
 <ul>
-  <li><%= favorite.post.title %> By: <%= link_to(favorite.post.user.name) %> Votes: <%= favorite.post.rank %></li>
+  <li><%= favorite.post.title %>
+    <li style="list-style: none">By: <%= link_to(favorite.post.user.name) %>
+      <% avatar_url = favorite.post.user.avatar_url(12) %>
+        <% if avatar_url %>
+          <%=image_tag avatar_url, class: 'media-object' %>
+        <% end %>
+      Up-Votes: <%= favorite.post.up_votes %>
+      Number of comments: <%= favorite.post.comments.count %>
+    </li>
 </ul>
