@@ -1,0 +1,26 @@
+.ted-jumbotron {
+    padding: 30px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eeeeee;
+}
+
+.ted-nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.headers {
+  text-align: center;
+}
+
+.ted-col {
+  vertical-align: center;
+  text-align: center;
+}
+
+.ted-link {
+  padding: 15px 15px;
+}

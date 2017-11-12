@@ -1,9 +1,7 @@
 class TopicsController < ApplicationController
 
   before_action :require_sign_in, except: [:index, :show]
-  # before_action :authorize_user, except: [:index, :show]
-  before_action :authorize_moderator, only: [:edit, :update]
-  before_action :authorize_admin, except: [:index, :edit, :update, :show]
+  before_action :authorize_user, except: [:index, :show]
 
   def index
     @topics = Topic.all
@@ -11,6 +9,11 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
+
+    unless @topic.public || current_user
+      flash[:alert] = "You must be signed in to view private topics."
+      redirect_to new_session_path
+    end
   end
 
   def new
@@ -63,15 +66,8 @@ class TopicsController < ApplicationController
     params.require(:topic).permit(:name, :description, :public)
   end
 
-  def authorize_moderator
-    unless current_user.moderator? || current_user.admin?
-      flash[:error] = 'You must be a moderator or admin to do that.'
-      redirect_to topics_path
-    end
-  end
-
-  def authorize_admin
-    unless current_user.admin?
+  def authorize_user
+    unless current_user.admin? || current_user.member?
       flash[:alert] = "You must be an admin to do that."
       redirect_to topics_path
     end

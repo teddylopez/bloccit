@@ -1,7 +1,7 @@
 <br>
-<div class="jumbotron">
-  <h1>Bloccit</h1>
-  <p>Bloccit is a resource for sharing links with your friends!</p>
+<div class="ted-jumbotron">
+  <h1>teddit</h1>
+  <p>teddit is a resource for sharing links with your friends!</p>
   <p>
     <%= link_to "Sign In", new_session_path %> or
     <%= link_to "Sign Up", new_user_path, class: 'btn btn-primary' %> today!
@@ -10,15 +10,24 @@
 
 <div class="row">
   <div class="col-md-4">
-    <h2>Solves world hunger</h2>
-    <p>Bloccit will deliver food and water to those in need, all over the world.</p>
+    <div class="ted-col">
+      <h2>Express Yourself</h2>
+      <%= image_tag "Checklist.svg" %>
+      <p>As a user of teddit there is no limit to how many topics and posts you can write. You can add a post to any topic, comment on any post and even create your own topics to share with teddit's userbase.</p>
+    </div>
   </div>
   <div class="col-md-4">
-    <h2>Eliminates poverty</h2>
-    <p>Bloccit will deliver money and education to those in need, all over the world.</p>
+    <div class="ted-col">
+      <h2>Cast Your Vote</h2>
+      <%= image_tag "Medal.svg" %>
+      <p>teddit can quickly get overrun with a variety of posts but never fear: the most popular posts will rise to the top and ride the rocket of their popularity. Those destined for the down vote will be buried low in the depths of teddit's database.</p>
+    </div>
   </div>
   <div class="col-md-4">
-    <h2>Makes you better looking</h2>
-    <p>Bloccit will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
+    <div class="ted-col">
+      <h2>Mark Your Favorites</h2>
+      <%= image_tag "Love-Letter.svg" %>
+      <p>At teddit you can find the posts you love and make sure you never lose track of them. No matter how many posts you love, they'll all be saved in your user profile for easy perusing.</p>
+    </div>
   </div>
 </div>
