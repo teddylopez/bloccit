@@ -2,6 +2,12 @@
 
 <div class="jumbotron">
   <div class="row">
+    <% if @topics.empty? %>
+      <div class="blank-box">
+        <div class="row"></div>
+          <p> No topics yet! </p>
+      </div>
+      <% end %>
       <div class="col-md-8">
           <% @topics.each do |topic| %>
               <div class="media">

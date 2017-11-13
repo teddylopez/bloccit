@@ -11,7 +11,13 @@
       <div class="col-md-8">
         <p class="lead"><%= @topic.description %></p>
 
-        <h2>Posts</h2>
+        <h2>Posts: </h2>
+        <% if @topic.posts.empty? %>
+          <div class="blank-box">
+            <div class="row"></div>
+              <p> No posts yet! </p>
+          </div>
+          <% end %>
         <% @topic.posts.each do |post| %>
         <div class="media">
           <%= render partial: 'votes/voter', locals: { post: post } %>
@@ -19,7 +25,13 @@
         </div>
         <% end %>
 
-        <h2>Sponsored Posts</h2>
+        <h2>Sponsored Posts: </h2>
+        <% if @topic.sponsored_posts.empty? %>
+          <div class="blank-box">
+            <div class="row"></div>
+              <p> No sponsored posts yet! </p>
+          </div>
+          <% end %>
         <% @topic.sponsored_posts.each do |sponsored_post| %>
         <div class="media">
           <div class="media-body">
