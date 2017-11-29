@@ -30,3 +30,4 @@ gem 'bootstrap-sass', '3.2.0.2'
 gem 'autoprefixer-rails'
 gem 'figaro'
 gem 'bcrypt'
+gem "font-awesome-rails"
