@@ -1,4 +1,4 @@
-<h1 class="headers">Topics</h1>
+<h1 class="headers">All Topics</h1>
 
 <div class="jumbotron">
   <div class="row">
@@ -24,7 +24,8 @@
       </div>
       <% if user_is_authorized_for_topics? %>
           <div class="col-md-4">
-              <%= link_to "New Topic", new_topic_path, class: 'btn btn-success btn-xs' %>
+              <p>Can't find what you're looking for?</p>
+              <p><%= link_to "New Topic", new_topic_path, class: 'btn btn-success btn-xs' %></p>
           </div>
       <% end %>
   </div>
