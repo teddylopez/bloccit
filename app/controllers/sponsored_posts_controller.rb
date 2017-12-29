@@ -19,7 +19,7 @@ class SponsoredPostsController < ApplicationController
 
     if @sponsored_post.save
       flash[:notice] = "Sponsored Post was saved."
-      redirect_to [@topic, @sponsored_post]
+      redirect_to @topic
     else
       flash[:error] = "There was an error saving the sponsored post. Please try again."
       render :new
