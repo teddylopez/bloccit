@@ -24,8 +24,7 @@
       </div>
       <% if user_is_authorized_for_topics? %>
           <div class="col-md-4">
-              <p>Can't find what you're looking for?</p>
-              <p><%= link_to "New Topic", new_topic_path, class: 'btn btn-success btn-xs' %></p>
+              <p>Can't find what you're looking for? <%= link_to "New Topic", new_topic_path, class: 'btn btn-success btn-xs' %></p>
           </div>
       <% end %>
   </div>
