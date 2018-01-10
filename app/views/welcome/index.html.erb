@@ -15,11 +15,11 @@
   <% if current_user.present? %>
   <h1 class="title">Welcome back, <%= current_user.name %></h1>
   <div class="home-tron">
-    <h3>Here is a list of your posts:</h3>
+    <h3>Here are your most recent posts:</h3>
     <% if(!current_user.posts.any?) %>
       <p><%= current_user.name %> has not posted anything yet.</p>
     <% else %>
-      <%= render current_user.posts %>
+      <%= render current_user.posts.limit(5).order("created_at desc") %>
     <% end %>
 
   </div>

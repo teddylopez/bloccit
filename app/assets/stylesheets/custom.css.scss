@@ -13,6 +13,35 @@
     box-shadow: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.left {
+  float:left;
+  font-size: 1.5em;
+  margin-top: 2rem;
+  a {
+    margin: 0 1rem;
+  }
+}
+
+.right {
+  float: right;
+  font-size: 1.1em;
+  margin-right: 2rem;
+}
+
 .navbar.navbar-default .navbar-collapse {
     border: 0;
     -webkit-box-shadow: none;

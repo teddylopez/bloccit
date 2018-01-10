@@ -10,30 +10,25 @@
 </head>
 <body>
 
-<header class="navbar navbar-default" role="navigation">
-  <div class="navbar-inner">
-    <div class="container">
-        <ul class="nav nav-tabs">
-          <li><%= link_to "teddit", root_path %></li>
-          <li><%= link_to "topics", topics_path %></li>
-          <li><%= link_to "contact", contact_path %></li>
-
-          <div class="pull-right user-info">
-            <% if current_user.present? %>
-            <div class="pull-left ted-link">
-              <%= link_to current_user.name, user_path(current_user) %> <br/>
-            </div>
-            <div class="pull-right ted-link">
-              <%= link_to "Sign Out", session_path(current_user), method: :delete %>
-            </div>
-              <%= image_tag current_user.avatar_url(48), class: "gravatar" %>
-            <% else %>
-              <%= link_to "Sign In", new_session_path %> or
-              <%= link_to "Sign Up", new_user_path %>
-            <% end %>
-          </div>
-        </ul>
-        </header>
+<header>
+  <div class="container clearfix">
+    <nav class="left">
+      <%= link_to "teddit", root_path %>
+      <%= link_to "topics", topics_path %>
+      <%= link_to "contact", contact_path %>
+    </nav>
+    <nav class="right">
+      <% if current_user.present? %>
+          <%= link_to current_user.name, user_path(current_user) %>
+          <%= image_tag current_user.avatar_url(48), class: "gravatar" %>
+          <%= link_to "Sign Out", session_path(current_user), method: :delete %>
+      <% else %>
+        <%= link_to "Sign In", new_session_path %> or
+        <%= link_to "Sign Up", new_user_path %>
+      <% end %>
+    </nav>
+  </div>
+</header>
 
       <% if flash[:notice] %>
         <div class="alert alert-success">
