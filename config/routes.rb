@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get 'about' => 'welcome#about'
   get 'contact' => 'welcome#contact'
+  get '*path' => redirect('/')
+  
   root 'welcome#index'
 
   end
