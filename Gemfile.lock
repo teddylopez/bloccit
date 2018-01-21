@@ -187,7 +187,7 @@ DEPENDENCIES
   figaro
   font-awesome-rails
   jquery-rails
-  pg (~> 1.0)
+  pg
   pry-rails
   rails (= 4.2.5)
   rails_12factor
