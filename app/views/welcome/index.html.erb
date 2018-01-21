@@ -22,6 +22,7 @@
       <%= render current_user.posts.limit(5).order("created_at desc") %>
     <% end %>
 
+
   </div>
   <% end %>
 </div>
@@ -30,22 +31,22 @@
   <div class="col-md-4">
     <div class="ted-col">
       <h2>Express Yourself</h2>
-      <%= image_tag "Checklist.svg" %>
-      <p>As a user of teddit there is no limit to how many topics and posts you can write. You can add a post to any topic, comment on any post and even create your own topics to share with teddit's userbase.</p>
+      <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
+      <h4>Create as many topics, posts, and comments as you'd like.</h4>
     </div>
   </div>
   <div class="col-md-4">
     <div class="ted-col">
       <h2>Cast Your Vote</h2>
-      <%= image_tag "Medal.svg" %>
-      <p>teddit can quickly get overrun with a variety of posts but never fear: the most popular posts will rise to the top and ride the rocket of their popularity. Those destined for the down vote will be buried low in the depths of teddit's database.</p>
+      <i class="fa fa-thumbs-o-up fa-5x" aria-hidden="true"></i>
+      <h4>Popular posts rise to the top.</h4>
     </div>
   </div>
   <div class="col-md-4">
     <div class="ted-col">
       <h2>Mark Your Favorites</h2>
-      <%= image_tag "Love-Letter.svg" %>
-      <p>At teddit you can find the posts you love and make sure you never lose track of them. No matter how many posts you love, they'll all be saved in your user profile for easy perusing.</p>
+      <i class="fa fa-star-o fa-5x" aria-hidden="true"></i>
+      <h4>Keep track of all of your favorite posts.</h4>
     </div>
   </div>
 </div>
