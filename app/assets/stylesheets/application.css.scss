@@ -15,9 +15,9 @@
  *= require_self
  */
 
-@import 'normalize';
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'normalize';
 @import "font-awesome";
 
 body {
@@ -34,6 +34,11 @@ body {
     margin-bottom: 30px;
     color: inherit;
     background-color: #eeeeee;
+}
+
+.recents {
+  padding-left: 20%;
+  float: left;
 }
 
 .navbar.navbar-default {
@@ -86,6 +91,9 @@ body {
   padding-top: 2rem;
   div {
     padding-top: 2rem;
+  }
+  .topics {
+    padding-left: 10%;
   }
 }
 

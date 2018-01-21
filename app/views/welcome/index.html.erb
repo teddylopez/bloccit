@@ -14,15 +14,21 @@
   <% end %>
   <% if current_user.present? %>
   <h1 class="title">Welcome back, <%= current_user.name %></h1>
-  <div class="home-tron">
+  <div class="home-tron clearfix">
+    <div class="recents">
     <h3>Here are your most recent posts:</h3>
-    <% if(!current_user.posts.any?) %>
-      <p><%= current_user.name %> has not posted anything yet.</p>
-    <% else %>
-      <%= render current_user.posts.limit(5).order("created_at desc") %>
-    <% end %>
-
-
+      <% if(!current_user.posts.any?) %>
+        <p><%= current_user.name %> has not posted anything yet.</p>
+      <% else %>
+        <%= render current_user.posts.limit(5).order("created_at desc") %>
+      <% end %>
+    </div>
+    <div class="recents topics">
+      <h3>Newest Topics:</h3>
+      <% @topics.each do |topic| %>
+        <%= link_to topic.name, topic %> <small>created <%= time_ago_in_words(topic.created_at) %> ago</small><br>
+      <% end %>
+    </div>
   </div>
   <% end %>
 </div>
