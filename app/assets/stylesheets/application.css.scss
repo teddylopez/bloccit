@@ -19,11 +19,7 @@
 @import 'bootstrap';
 @import "font-awesome";
 @import 'normalize';
-
-body {
-    background-color: #F0F8FF; //: url(http://cdn.pcwallart.com/images/blue-gradient-wallpaper-4.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+@import 'custom';
+@import 'users';
+@import 'votes';
+@import 'welcome';
