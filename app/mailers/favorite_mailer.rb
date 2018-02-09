@@ -1,10 +1,10 @@
 class FavoriteMailer < ApplicationMailer
-  default from: 'tedmlopez@gmail.com'
+  default from: 'ted@teddit.com'
 
   def new_comment(user, post, comment)
-    headers["Message-ID"] = "<comments/#{comment.id}@mysterious-reaches-20384>"
-    headers["In-Reply-To"] = "<post/#{post.id}@mysterious-reaches-20384>"
-    headers["References"] = "<post/#{post.id}@mysterious-reaches-20384>"
+    headers["Message-ID"] = "<comments/#{comment.id}@secret-ridge-83487>"
+    headers["In-Reply-To"] = "<post/#{post.id}@secret-ridge-83487>"
+    headers["References"] = "<post/#{post.id}@secret-ridge-83487>"
 
     @user = user
     @post = post
@@ -14,9 +14,9 @@ class FavoriteMailer < ApplicationMailer
    end
 
    def new_post(post)
-     headers["Message-ID"] = "<posts/#{post.id}@mysterious-reaches-20384>"
-     headers["In-Reply-To"] = "<post/#{post.id}@mysterious-reaches-20384>"
-     headers["References"] = "<post/#{post.id}@mysterious-reaches-20384>"
+     headers["Message-ID"] = "<posts/#{post.id}@secret-ridge-83487>"
+     headers["In-Reply-To"] = "<post/#{post.id}@secret-ridge-83487>"
+     headers["References"] = "<post/#{post.id}@secret-ridge-83487>"
 
      @post = post
 
