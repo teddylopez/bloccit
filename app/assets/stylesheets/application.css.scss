@@ -13,6 +13,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 @import 'bootstrap-sprockets';
@@ -20,7 +21,7 @@
 @import 'normalize';
 
 body {
-    background-color: #F0F8FF; //: url(http://cdn.pcwallart.com/images/blue-gradient-wallpaper-4.jpg) no-repeat center center fixed;
+    background-color: #F0F8FF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -110,6 +111,9 @@ body {
   vertical-align: center;
   text-align: center;
   padding-top: 4rem;
+  i {
+    font-size: 10rem;
+  }
 }
 
 .ted-link {
