@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :questions
   resources :advertisements
+  resources :contacts, only: [:new, :create]
   resources :topics do
     resources :posts, except: [:index]
     resources :sponsored_posts, except: [:index]
@@ -20,9 +21,8 @@ Rails.application.routes.draw do
   post 'users/confirm' => 'users#confirm'
 
   get 'about' => 'welcome#about'
-  get 'contact' => 'welcome#contact'
   get '*path' => redirect('/')
-  
+
   root 'welcome#index'
 
   end

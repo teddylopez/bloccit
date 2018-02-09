@@ -140,3 +140,24 @@
  .remember-checkbox {
    margin-left: 10px;
  }
+
+ .form {
+   text-align: center;
+   input[type="text"], input[type="email"], input[type="password"]{
+    width: 50%;
+    max-width: 50%;
+    height: 3em;
+    border: 2px solid #E9E9E9;
+    padding: 1em;
+    margin: .5em 0 2em 0;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 30rem;
+    border: 2px solid #E9E9E9;
+    padding: 1em;
+    margin: .5em 0 2em 0;
+  }
+}

@@ -30,3 +30,4 @@ gem 'autoprefixer-rails'
 gem 'figaro'
 gem 'bcrypt'
 gem "font-awesome-rails"
+gem 'mail_form', '~> 1.7'
