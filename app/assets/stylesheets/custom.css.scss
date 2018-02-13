@@ -83,6 +83,10 @@
     list-style: none;
 }
 
+.log-links {
+  padding-top: 2rem;
+}
+
 .headers {
   text-align: center;
 }
@@ -160,4 +164,8 @@
     padding: 1em;
     margin: .5em 0 2em 0;
   }
+}
+
+.form-header {
+  margin-top: 5rem;
 }

@@ -12,7 +12,8 @@
         <h2 class="media-heading"><%= @user.name %></h2>
         <small>
           <%= pluralize(@user.posts.count, 'post') %>,
-          <%= pluralize(@user.comments.count, 'comment') %>
+          <%= pluralize(@user.comments.count, 'comment') %><br>
+          Edit your profile picture at <a href="www.gravatar.com" target=_blank>www.gravatar.com</a>
         </small>
       </div>
     </div>
