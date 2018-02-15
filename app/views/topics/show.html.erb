@@ -18,7 +18,7 @@
             <% if current_user %>
               <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success btn-xs' %>
             <% end %>
-            <% if user_is_authorized_for_topics? %>
+            <% if current_user.role == 1 %>
               <%= link_to "New Sponsored Post", new_topic_sponsored_post_path(@topic), class: 'btn btn-primary btn-xs' %>
             <% end %>
           </h2>
