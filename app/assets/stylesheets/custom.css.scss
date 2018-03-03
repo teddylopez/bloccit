@@ -4,6 +4,23 @@ a {
   text-decoration: none;
 }
 
+.login-table {
+  display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+    ul {
+	  list-style: none;
+	    li {
+		  display: inline;
+    }
+	}
+}
+
+@media(max-width:767px){
+  #user {
+    float: left;
+  }
+}
+
 .ted-body {
     background-color: #F0F8FF;
     -webkit-background-size: cover;
@@ -148,6 +165,7 @@ a {
  .gravatar {
    margin-bottom: 5px;
    margin-top: 5px;
+   border-radius: 5px;
  }
 
  .remember-checkbox {

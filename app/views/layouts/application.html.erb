@@ -14,12 +14,17 @@
 
 <header>
   <div class="container clearfix">
-    <nav class="left">
-      <%= link_to "teddit", root_path %>
-      <%= link_to "topics", topics_path %>
-      <%= link_to "contact", new_contact_path %>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <nav class="left navbar-collapse collapse">
+      <div class="login login-table">
+        <ul>
+          <li><%= link_to "teddit", root_path %></li>
+          <li><%= link_to "topics", topics_path %></li>
+          <li><%= link_to "contact", new_contact_path %></li>
+        </ul>
+        </div>
     </nav>
-    <nav class="right">
+    <nav class="right" id="user">
       <% if current_user.present? %>
           <%= link_to current_user.name, user_path(current_user) %>
           <%= image_tag current_user.avatar_url(48), class: "gravatar" %>
