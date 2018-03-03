@@ -1,5 +1,9 @@
 @import "font-awesome";
 
+a {
+  text-decoration: none;
+}
+
 .ted-body {
     background-color: #F0F8FF;
     -webkit-background-size: cover;
@@ -14,11 +18,8 @@
     margin-bottom: 30px;
     color: inherit;
     background-color: #eeeeee;
-}
-
-.recents {
-  padding-left: 5rem;
-  float: left;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar.navbar-default {
@@ -72,12 +73,17 @@
 }
 
 .home-tron {
+  display: flex;
   padding-top: 2rem;
   div {
     padding-top: 2rem;
+    flex: 1;
   }
-  .topics {
-    padding-left: 10%;
+}
+
+@media(max-width:767px){
+  .home-tron {
+    flex-direction: column;
   }
 }
 
@@ -119,7 +125,6 @@
 .post-body {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin-left: 4rem;
 }
 
 .votes-div {
@@ -176,4 +181,16 @@
 
 .app-container, .top-pad {
   padding-top: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.69rem;
+  margin-top: 10rem;
+  padding: 2.5em 5%;
+  display: block;
+  text-align: center;
+  p {
+    font-size: 1.5rem;
+  }
 }

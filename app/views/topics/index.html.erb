@@ -1,6 +1,9 @@
 <h1 class="headers">All Topics</h1>
 
 <div class="jumbotron">
+  <% if user_is_authorized_for_topics? %>
+      <p><%= link_to "New Topic", new_topic_path, class: 'btn btn-success btn-xs' %></p>
+  <% end %>
   <div class="row">
     <% if @topics.empty? %>
       <div class="blank-box">
@@ -22,10 +25,6 @@
               </div>
           <% end %>
       </div>
-      <% if user_is_authorized_for_topics? %>
-          <div class="col-md-4">
-              <p>Can't find what you're looking for? <%= link_to "New Topic", new_topic_path, class: 'btn btn-success btn-xs' %></p>
-          </div>
-      <% end %>
+
   </div>
 </div>
