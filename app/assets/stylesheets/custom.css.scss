@@ -38,7 +38,7 @@ nav li {
 	color: #2262AD;
 }
 
-/*MEDIA QUERY*/
+/*MEDIA QUERY for header and nav */
 @media only screen and (max-width : 640px) {
 	header {
 		position: absolute;
@@ -181,7 +181,7 @@ nav li {
 }
 
 @media(max-width:767px){
-  .home-tron {
+  .home-tron-login {
     flex-direction: column;
   }
 }
