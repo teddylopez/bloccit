@@ -24,11 +24,11 @@ nav {
   font-size: 2rem;
 }
 
-ul {
+nav ul {
 	list-style: none;
 }
 
-li {
+nav li {
 	display: inline-block;
 	float: left;
 	padding: 10px
@@ -73,6 +73,10 @@ li {
 
   .headers {
     padding-top: 5rem;
+  }
+
+  .media {
+    padding-top: 6rem;
   }
 }
 
