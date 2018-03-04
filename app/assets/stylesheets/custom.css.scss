@@ -164,7 +164,14 @@ nav li {
   text-align: center;
 }
 
-.home-tron {
+.home-tron-logout {
+  padding-top: 2rem;
+  div {
+    padding-top: 2rem;
+  }
+}
+
+.home-tron-login {
   display: flex;
   padding-top: 2rem;
   div {

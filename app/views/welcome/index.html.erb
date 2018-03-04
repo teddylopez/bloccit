@@ -2,7 +2,7 @@
 <div class="ted-jumbotron">
   <% if !current_user.present? %>
   <h1 class="title">Welcome to teddit</h1>
-  <div class="home-tron">
+  <div class="home-tron-logout">
     <h3>teddit is a site for sharing links with your friends! Sign up to write about your favorite topics with the rest of the community.</h3>
     <div>
       <h4>
@@ -14,7 +14,7 @@
   <% end %>
   <% if current_user.present? %>
   <h1 class="title">Welcome back, <%= current_user.name %></h1>
-  <div class="home-tron clearfix">
+  <div class="home-tron-login clearfix">
     <div class="recents">
     <h3>Here are your most recent posts:</h3>
       <% if(!current_user.posts.any?) %>
